@@ -1,21 +1,22 @@
-function convert() {
-    let amount = parseFloat(document.getElementById("amount").value);
-    let de = document.getElementById("fromCurrency").value;
-    let vers = document.getElementById("toCurrency").value;
 
-    // Taux de change fixes (exemple)
-    let rates = {
-        "FC": {  "USD": 1/2850 },
-        "USD": { "FC": 2850 },
-      
-    };
-
-    if (!isNaN(amount) && rates[de]&& rates[de][vers]) {
+    
+        function convert() {
+            let amount = parseFloat(document.getElementById("amount").value);
+            let de = document.getElementById("fromCurrency").value;
+            let vers = document.getElementById("toCurrency").value;
+            let rat = parseFloat(document.getElementById("exchangeRate").value);
+            let rate = {
+                "FC": {  "USD": 1/rat },
+                "USD": { "FC": rat },
+              
+            };
         
-            let convertedAmount = amount * rates[de][vers];
-        document.getElementById("result").innerText = 
-            amount + " " + de + " = " + convertedAmount.toFixed(2) + " " + vers;
-    } else {
-        document.getElementById("result").innerText = "Veuillez entrer un montant valide.";
-    }
-}
+
+            if (!isNaN(amount) && rate[de] && rate[de][vers]) {
+                let convertedAmount = amount * rate[de][vers];
+                document.getElementById("result").innerText = 
+                    amount + " " + de + " = " + convertedAmount.toFixed(2) + " " + vers;
+            } else {
+                document.getElementById("result").innerText = "Veuillez entrer un montant et un taux de change valides.";
+            }
+        }

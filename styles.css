@@ -10,6 +10,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     background: #5951f4;
+    max-height: 120vh;
 }
 select, input, button {
     margin: 10px;
