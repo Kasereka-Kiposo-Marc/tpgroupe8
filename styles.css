@@ -9,38 +9,5 @@ body {
     max-width: 400px;
     margin: auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #d44343;
     border-radius: 10px;
-    background-color:rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2 );
-    max-height: 120vh;
-        
-}
-select, input, button {
-    margin: 10px;
-    padding: 10px;
-    width: 90%;
-}
-.result {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-    color:white;
-    animation: fadeIn 0.5s forwards;
-}
-button{
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    background: #ff7b0f;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition:background 0.5s ease;
-
-}
-button:hover{
-    background: #f57c00;
-}
