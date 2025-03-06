@@ -8,6 +8,10 @@
             let rate = {
                 "FC": {  "USD": 1/rat },
                 "USD": { "FC": rat },
+                "£": { "FC": rat },
+                "FC": { "£": rat },
+                "shilling": { "FC": rat },
+                "FC": { "shilling": rat },
               
             };
         
